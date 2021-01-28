@@ -50,13 +50,13 @@ fi
 
 tar xf mpc-${MPC_VERSION}.tar.gz
 
-if [[ ! -f gcc-7.3.0.tar.xz ]] ;
+if [[ ! -f gcc-${GCC_VERSION}.tar.xz ]] ;
 then
-	wget https://ftp.gnu.org/gnu/gcc/gcc-7.3.0/gcc-7.3.0.tar.xz
+	wget https://ftp.gnu.org/gnu/gcc/gcc-${GCC_VERSION}/gcc-${GCC_VERSION}.tar.xz
 fi
 
-tar xf gcc-7.3.0.tar.xz
-mv gcc-7.3.0 gcc
+tar xf gcc-${GCC_VERSION}.tar.xz
+mv gcc-${GCC_VERSION} gcc
 
 # Apply the right patchset
 cd gcc && patch -p1 < ../avr-gcc-patches/atmel-patches-gcc.7.3.0-arduino2.patch && cd ..
