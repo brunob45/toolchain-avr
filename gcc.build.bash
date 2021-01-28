@@ -59,7 +59,7 @@ tar xf gcc-${GCC_VERSION}.tar.xz
 mv gcc-${GCC_VERSION} gcc
 
 # Apply the right patchset
-cd gcc && patch -p1 < ../avr-gcc-patches/atmel-patches-gcc.7.3.0-arduino2.patch && cd ..
+# cd gcc && patch -p1 < ../avr-gcc-patches/atmel-patches-gcc.${GCC_VERSION}-arduino2.patch && cd ..
 
 #pushd gcc
 #pushd gcc/config/avr/
